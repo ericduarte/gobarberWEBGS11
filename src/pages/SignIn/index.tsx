@@ -1,9 +1,10 @@
 import React, { useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { FormHandles } from '@unform/core';
-import * as Yup from 'yup';
-
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 import { Form } from '@unform/web';
+import * as Yup from 'yup';
+import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
@@ -52,10 +53,10 @@ const SignIn: React.FC = () => {
           <Button type="submit">Entrar</Button>
           <a href="forgot">Esqueci Minha Senha</a>
         </Form>
-        <a href="/singup">
+        <Link to="/signup">
           <FiLogIn size={20} />
           Criar Conta
-        </a>
+        </Link>
       </Content>
       <Background />
     </Container>
